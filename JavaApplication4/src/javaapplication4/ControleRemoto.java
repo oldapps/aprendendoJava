@@ -86,16 +86,17 @@ public class ControleRemoto  {
    }
    public void  play(){
        if (this.getLigado() == true) {
-           this.setTocando = true;
+           this.setTocando(true);
            
        } else {
            
        }
    }
    public void  pause(){
-       if (this.getLigado() == true)
-           this.setTocando = false;
+       if (this.getLigado() == true && this.getTocando() == true)
+           this.setTocando (false);
    } else {
+            System.out.println("Não consegui pausar");
 }
     
 }
