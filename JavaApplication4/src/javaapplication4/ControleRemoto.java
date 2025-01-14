@@ -95,10 +95,8 @@ public class ControleRemoto  {
    public void  pause(){
        if (this.getLigado() == true && this.getTocando() == true)
            this.setTocando (false);
-   } else {
-            System.out.println("Não consegui pausar");
-}
-    
+       System.out.println("Pausado");
+   }
 }
 
 
