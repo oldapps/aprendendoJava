@@ -16,7 +16,7 @@ public class Lutador {
     // São como nossas funções e procedimento dentro de uma classe
     
     public void apresentar(){
-        System.out.println("----------------------------------------------------");
+        System.out.println("\n");
         System.out.println("CHEGOU A HORA DE APRESENTAR O LUTADOR " + getNome());
         System.out.println("DIRETAMENTE DO " + getNacionalidade());
         System.out.println("COM " + getIdade() + " anos");    
@@ -75,7 +75,7 @@ public class Lutador {
         return vitorias;
     }
     public int getDerrotas(){
-        return empates;
+        return derrotas;
     }
     public int getEmpates(){
         return empates;
