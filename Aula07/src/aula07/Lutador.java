@@ -16,26 +16,31 @@ public class Lutador {
     // São como nossas funções e procedimento dentro de uma classe
     
     public void apresentar(){
+        System.out.println("Lutador: " + getNome());
+        System.out.println("Origem: " + getNacionalidade());
+        System.out.println(getIdade() + " anos");    
+        System.out.println(getAltura() + "m de altura");
+        System.out.println("Pesando :" + getPeso());
+        System.out.println("Ganhou: " + getVitorias());
+        System.out.println("Perdeu :" + getDerrotas());
+        System.out.println("Empatou: " + getEmpates());
+    }   
     
-    }
     public void status(){
-        System.out.println("Lutador: getNome() ");
-        System.out.println("Origem: getidade() ");
-        System.out.println("Lutador: getNacionalidade() ");
-        System.out.println(getIdade() "Anos");
+        System.out.println(getNome());
+        System.out.println("E um peso " + getCategoria());
+        System.out.println(getVitorias() + "Vitorias");
+        System.out.println(getVitorias() + "Derrotas");
+        System.out.println(getVitorias() + "Empates");
     }
     public void ganharLuta(){
-        setVitorias(getVitorias() + 1);
-        setVitorias(getVitorias() + 1);
-        setDerrotas(getDerrotas() + 1);
-        setEmpates(getEmpates() + 1);
-    
+        setVitorias(getVitorias() + 1 );        
     }
     public void perderLuta(){
-    
+        setDerrotas(getDerrotas() + 1);
     }
     public void empatarLuta(){
-    
+        setEmpates(getEmpates() + 1);
     }
     
     public void Lutador(String no, String na, int id, float al, float pe, int vi, int de, int em){
@@ -107,13 +112,13 @@ public class Lutador {
             this.categoria = "Inválido";
         }
     }
-    public void setVitorias(){
+    public void setVitorias(int vitorias){
         this.vitorias = vitorias;
     }
-    public void setDerrotas(){
+    public void setDerrotas(int derrotas){
         this.derrotas = derrotas;        
     }
-    public void setEmpates(){
+    public void setEmpates(int empates){
         this.empates = empates;
     }
 
