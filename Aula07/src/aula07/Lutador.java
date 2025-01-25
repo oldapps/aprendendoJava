@@ -2,48 +2,47 @@ package aula07;
 public class Lutador {
     // Atributos
     //  Variaveis dentro de uma clase
-    private String nome = "Pretty Boy";
-    private String nacionalidade = "França";
-    private int idade = 31;
-    private float altura = 1.75f;
-    private float peso = 68.9f;
-    private String categoria = "Leve";
-    private int vitorias = 11;
-    private int derrotas = 2;
-    private int empates = 1;
+    private String nome;
+    private String nacionalidade;
+    private int idade;
+    private float altura;
+    private float peso;
+    private String categoria;
+    private int vitorias;
+    private int derrotas;
+    private int empates;
     
     // Métodos
     // São como nossas funções e procedimento dentro de uma classe
     
     public void apresentar(){
-        System.out.println("Lutador: " + getNome());
-        System.out.println("Origem: " + getNacionalidade());
-        System.out.println(getIdade() + " anos");    
-        System.out.println(getAltura() + "m de altura");
-        System.out.println("Pesando :" + getPeso());
-        System.out.println("Ganhou: " + getVitorias());
-        System.out.println("Perdeu :" + getDerrotas());
-        System.out.println("Empatou: " + getEmpates());
+        System.out.println("----------------------------------------------------");
+        System.out.println("CHEGOU A HORA DE APRESENTAR O LUTADOR " + getNome());
+        System.out.println("DIRETAMENTE DO " + getNacionalidade());
+        System.out.println("COM " + getIdade() + " anos");    
+        System.out.println("NA ALTURA DE " + getAltura() + "M");
+        System.out.println("Pesando: " + getPeso());
+        System.out.println("E JA GANHOU " + getVitorias() + " LUTAS");
+        System.out.println("PERDEU " + getDerrotas());
+        System.out.println("E EMPATOU " + getEmpates());
     }   
     
     public void status(){
-        System.out.println(getNome());
-        System.out.println("E um peso " + getCategoria());
-        System.out.println(getVitorias() + "Vitorias");
-        System.out.println(getVitorias() + "Derrotas");
-        System.out.println(getVitorias() + "Empates");
+        System.out.println(getVitorias() + " Vitorias");
+        System.out.println(getDerrotas() + " Derrotas");
+        System.out.println(getEmpates() + " Empates");
     }
     public void ganharLuta(){
-        setVitorias(getVitorias() + 1 );        
+        this.setVitorias(this.getVitorias() + 1);
     }
     public void perderLuta(){
-        setDerrotas(getDerrotas() + 1);
+        this.setDerrotas(this.getDerrotas() + 1);
     }
     public void empatarLuta(){
-        setEmpates(getEmpates() + 1);
+        this.setEmpates(this.getEmpates() + 1);
     }
     
-    public void Lutador(String no, String na, int id, float al, float pe, int vi, int de, int em){
+    public Lutador(String no, String na, int id, float al, float pe, int vi, int de, int em){
         setNome(no);
         nacionalidade = na;
         idade = id;
@@ -66,7 +65,7 @@ public class Lutador {
     public float getAltura(){
         return altura;
     }
-    public float getPeso(){
+     public float getPeso(){
         return peso;
     }
     public String getCategoria(){
@@ -83,7 +82,7 @@ public class Lutador {
     }
     
     
-    public void setNome(String no){
+    public void setNome(String nome){
         this.nome = nome;
     }
     public void setNacionalidade(){
@@ -95,12 +94,12 @@ public class Lutador {
     public void setAltura(){
         this.altura = altura;
     }
-    public void setPeso(float pe){
+        public void setPeso(float peso){
         this.peso = peso;
         setCategoria();
     }
-    public void setCategoria(){
-        if (getPeso() <52.2) {
+    private void setCategoria(){
+        if (getPeso() < 52.2) {
             this.categoria = "Inválido";            
         } else if (getPeso() <= 70.3 ) {
             this.categoria = "Leve";
